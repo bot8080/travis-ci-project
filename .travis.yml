@@ -5,7 +5,10 @@ install:
   - npm install
 script:
   - npm test
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 deploy:
   provider: heroku
-  api_key:
-    secure: 74dd1373-8094-4049-9c29-f9fabfc57daa
+  skip-cleanup: true
+  api_key: $HEROKU_TOKEN
+  app: node-travis-app
