@@ -12,3 +12,4 @@ deploy:
   skip-cleanup: true
   api_key: $HEROKU_TOKEN
   app: node-travis-app
+
