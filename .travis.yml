@@ -11,4 +11,4 @@ deploy:
   provider: heroku
   skip-cleanup: true
   api_key: $HEROKU_TOKEN
-  app: node-travis-app
+  app: node-travis-app2
